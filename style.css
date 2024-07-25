@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+.calculator{
+    border: 2px solid green;
+    border-radius: 20px;
+    padding: 18px;
+    background: transparent ;
+    /* box-shadow: 0px 3px 15px rgba(113,115,119,0.5); */
+    box-shadow:  0 0 .2rem #fff,
+    0 0 .2rem green,
+    0 0 .2rem rgb(49, 190, 13),
+    0 0 0.2rem rgb(6, 173, 6),
+    0 0 2rem rgb(20, 128, 5),
+    inset 0 0 1rem rgb(4, 90, 4);
+
+}
+
+input{
+    width: 320px;
+    border:none ;
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    text-align: right;
+    box-shadow: 0px 2px 5px green;
+    font-size: 35px;
+    cursor: pointer;
+    color: beige;
+
+}
+
+input::placeholder{
+    color: #ffff;
+}
+
+button{
+    border: none;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    box-shadow: 0px 2px 4.5px greenyellow;
+
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+}
+@keyframes flicker {
+    
+    0%, 20%, 40%, 50%, 60%, 70%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    }
+    
+    10%, 20%, 30%, 50%, 100% {        
+        text-shadow: none;
+    }    
+  }
+
+.eq{
+    background-color:green;
+}
+
+.plus{
+    color: lime;
+}
